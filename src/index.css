@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #0D0D0D;
+  color: white;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-purple-500 text-white px-8 py-4 rounded-full hover:bg-purple-600 transition-colors;
+  }
+}
