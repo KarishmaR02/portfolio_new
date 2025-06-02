@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaGithub, FaLinkedin, FaSun, FaMoon } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import { useState, useEffect, useCallback } from 'react'
-import profile from './karis.jpeg'
+import profile from './kareeshma.jpg'
 import Particles from "react-tsparticles"
 import { loadFull } from "tsparticles"
 import { SunIcon, MoonIcon } from '@heroicons/react/24/solid'
@@ -262,19 +262,24 @@ const Home = () => {
   <a 
     href="/KARISHMA R resume.pdf" 
     download="Karishma_R_Resume.pdf"
-    className={`${theme === 'dark' ? 'font-bold bg-purple-500 hover:bg-purple-600' : 'bg-[#CBC3E3] hover:bg-[#CBC3E3]/80'} px-4 py-2 sm:px-6 sm:py-3 rounded-full transition-colors flex items-center justify-center gap-2 w-1/2 sm:w-auto mx-auto sm:mx-0`}
+    className={`font-bold ${
+      theme === 'dark' 
+        ? 'bg-purple-500 hover:bg-purple-600' 
+        : 'bg-[#CBC3E3] hover:bg-[#CBC3E3]/80'
+    } px-4 py-2 sm:px-6 sm:py-3 rounded-full transition-colors flex items-center justify-center gap-2 w-1/2 sm:w-auto mx-auto sm:mx-0`}
   >
     Resume
   </a>
-  <a 
-    href="#education" 
-    className="font-bold border-2 border-purple-500 
-      px-6 py-2 sm:px-6 sm:py-3 
-      rounded-full hover:bg-purple-500/10 transition-colors text-center 
-      w-4/5 sm:w-auto mx-auto sm:mx-0"
-  >
-    Education Details
-  </a>
+    <a 
+  href="#education" 
+  className="font-bold px-6 py-2 sm:px-6 sm:py-3 
+    rounded-full hover:bg-purple-500/10 transition-colors text-center 
+    w-4/5 sm:w-auto mx-auto sm:mx-0"
+  style={{ border: '2px solid #CBC3E3' }}
+>
+  Education Details
+</a>
+
 </div>
 
 
@@ -295,19 +300,37 @@ const Home = () => {
             {/* <p className={`${theme === 'dark'? 'text-xl text-gray-400 mb-8' : 'text-xl text-black-400 mb-8'} `}>             */}
              
             <div>
-    <h3 className="text-xl sm:text-4xl font-bold text-purple-500">1+</h3>
+            <h3
+  className={`text-xl sm:text-4xl font-bold ${
+    theme === 'dark' ? 'text-purple-500' : ''
+  }`}
+  style={theme !== 'dark' ? { color: '#CBC3E3' } : {}}
+>
+  1+
+</h3>
+
     <p className={`${theme === 'dark' ? 'text-xs sm:text-base text-gray-400' : 'text-xs sm:text-base text-black-400'}`}>
       Years Experience
     </p>
   </div>
   <div>
-    <h3 className="text-xl sm:text-4xl font-bold text-purple-500">3+</h3>
+  <h3
+  className={`text-xl sm:text-4xl font-bold ${
+    theme === 'dark' ? 'text-purple-500' : ''
+  }`}
+  style={theme !== 'dark' ? { color: '#CBC3E3' } : {}}
+>3+</h3>
     <p className={`${theme === 'dark' ? 'text-xs sm:text-base text-gray-400' : 'text-xs sm:text-base text-black-400'}`}>
       Projects Completed
     </p>
   </div>
   <div>
-    <h3 className="text-xl sm:text-4xl font-bold text-purple-500">MCA</h3>
+  <h3
+  className={`text-xl sm:text-4xl font-bold ${
+    theme === 'dark' ? 'text-purple-500' : ''
+  }`}
+  style={theme !== 'dark' ? { color: '#CBC3E3' } : {}}
+>MCA</h3>
     <p className={`${theme === 'dark' ? 'text-xs sm:text-base text-gray-400' : 'text-xs sm:text-base text-black-400'}`}>
       Holy Cross College
     </p>
@@ -338,7 +361,7 @@ const Home = () => {
             {/* About Content */}
             <div className="space-y-6">
             <p className={`${theme === 'dark' ? 'text-gray-300' : 'text-black-300'} text-sm sm:text-lg text-justify`}>
-   I’m Karishma R, a dedicated Full Stack Developer with hands-on experience in both frontend and backend technologies. I am skilled in ASP.NET, ADO.NET, Core Java, HTML, CSS, JavaScript, TypeScript, Angular, Next.js, and backend tools like Node-RED with SQL Server integration. I’ve worked at Capgemini as an Associate A2 and currently serve as a Software Engineer Trainee at NearTekPod. Academically, I hold an MCA and a B.Voc in IT, with a track record of consistent top performance.
+   I'm Karishma R, a dedicated Full Stack Developer with hands-on experience in both frontend and backend technologies. I am skilled in ASP.NET, ADO.NET, Core Java, HTML, CSS, JavaScript, TypeScript, Angular, Next.js, and backend tools like Node-RED with SQL Server integration. I've worked at Capgemini as an Associate A2 and currently serve as a Software Engineer Trainee at NearTekPod. Academically, I hold an MCA and a B.Voc in IT, with a track record of consistent top performance.
 My project portfolio includes systems like Product Management, AI-based Fake Logo Detection (YOLOv8), and personal web applications. I am certified in .NET Full Stack, Core Java, and Big Data (NPTEL), and have published a research paper on object recognition algorithms.
 As a fast learner and team player, I thrive on solving real-world problems and building clean, scalable digital solutions.
 </p>
@@ -496,7 +519,8 @@ As a fast learner and team player, I thrive on solving real-world problems and b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl font-bold mb-16 text-center"
+            className="text-3xl sm:text-5xl font-bold mb-8 sm:mb-16 text-center"
+        
           >
             My <span className={`${theme === 'dark' ? 'text-purple-500' : 'text-[#CBC3E3]'}`}>Education</span>
           </motion.h2>
@@ -508,8 +532,14 @@ As a fast learner and team player, I thrive on solving real-world problems and b
               transition={{ duration: 0.5 }}
               className={`${theme === 'dark' ? 'bg-[#1A1A1A]' : 'bg-purple-300/90'} p-8 rounded-2xl`}
               >
-              <h3 className={`text-2xl font-bold mb-2 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>Master of Computer Applications (MCA)</h3>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-4">
+            <h3
+  className={`text-base sm:text-2xl font-bold mb-2 ${
+    theme === 'dark' ? 'text-white' : 'text-black'
+  }`}
+>
+  Master of Computer Applications (MCA)
+</h3>
+ <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-4">
                 <p className={`${theme === 'dark' ? 'text-purple-500' : 'text-white'}`}>Holy Cross College</p>
                 <div className="hidden sm:block">
                   <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-white/60'}`}>•</span>
@@ -540,7 +570,10 @@ As a fast learner and team player, I thrive on solving real-world problems and b
               transition={{ duration: 0.5 }}
               className={`${theme === 'dark' ? 'bg-[#1A1A1A]' : 'bg-purple-300/90'} p-8 rounded-2xl`}
               >
-              <h3 className={`text-2xl font-bold mb-2 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>Bachelor of Vocational Information Technology (B.Voc IT)</h3>
+              <h3  className={`text-base sm:text-2xl font-bold mb-2 ${
+    theme === 'dark' ? 'text-white' : 'text-black'
+  }`}
+>Bachelor of Vocational Information Technology (B.Voc IT)</h3>
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-4">
                 <p className={`${theme === 'dark' ? 'text-purple-500' : 'text-white'}`}>Bishop Heber College</p>
                 <div className="hidden sm:block">
@@ -713,15 +746,17 @@ As a fast learner and team player, I thrive on solving real-world problems and b
                   ></textarea>
                 </div>
                 <button
-                  type="submit"
-                  className={`w-full py-3 px-6 text-white font-medium rounded-lg ${
-                    theme === 'dark' 
-                      ? 'bg-purple-500 hover:bg-purple-600' 
-                      : 'bg-purple-400 hover:bg-purple-500'
-                  } transition-colors duration-300`}
-                >
-                  SUBMIT
-                </button>
+  type="submit"
+  className={`w-full py-3 px-6 font-medium rounded-lg text-white ${
+    theme === 'dark'
+      ? 'bg-purple-500 hover:bg-purple-600'
+      : 'bg-[#CBC3E3] hover:bg-[#CBC3E3]/80'
+  } transition-colors duration-300`}
+>
+  SUBMIT
+</button>
+
+                 
               </form>
             </motion.div>
 
@@ -742,8 +777,10 @@ As a fast learner and team player, I thrive on solving real-world problems and b
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               </div>
-              <h3 className={`text-base sm:text-2xl font-bold mb-1 sm:mb-3 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>Phone & Mobile</h3>
-              <p className={`text-xs sm:text-lg ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>+91 6374458915</p>
+              <a href="tel:+916374458915" className="flex flex-col items-center">
+                <h3 className={`text-base sm:text-2xl font-bold mb-1 sm:mb-3 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>Phone & Mobile</h3>
+                <p className={`text-xs sm:text-lg ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>+91 6374458915</p>
+              </a>
               </motion.div>
 
             {/* Apply the same pattern to other contact icons */}
