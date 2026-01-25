@@ -10,7 +10,7 @@ import {
 import { MdEmail, MdArrowOutward, MdOutlineFileDownload } from "react-icons/md";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 import emailjs from "@emailjs/browser";
-import profile from "./karishma.jpeg";
+import profile from "./Karishma.jpeg";
 
 const BentoCard = ({
   children,
